@@ -86,7 +86,7 @@ public class JBookView extends FrameView {
     private JBookType myJBookType = JBookType.Unknown;
     private JBookLibrarian localLibrarian = null;
     private static Logger log = LoggerFactory.getLogger(JBookView.class);
-    private String bookPath = "H:\\Books\\";
+    private String bookPath = "c:\\Books\\";
     private File previousDir = null;
     // private ArrayList<jChapter> chapters = new ArrayList<>();
     // private DefaultListModel<String> chapterListModel = new DefaultListModel<>();
@@ -363,7 +363,7 @@ public class JBookView extends FrameView {
         this.jChapterList.setModel(chapterListModel);
         //String testBook1 = "H:\\Books\\test.epub";
         String testBook1 = "H:\\Books\\XPath_and_XPointer.epub";
-        // testBook1 = "H:\\test.epub";
+        testBook1 = "c:\\books\\vernejuletext98milnd11epub.epub";
         this.openJBook(testBook1);
         // status bar initialization - message timeout, idle icon and busy animation, etc
         ResourceMap resourceMap = getResourceMap();

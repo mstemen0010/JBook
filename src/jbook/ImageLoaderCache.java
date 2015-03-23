@@ -86,7 +86,7 @@ class ImageLoaderCache extends Dictionary<String, Image> {
 	private String getResourceHref(String requestUrl) {
 		String resourceHref = requestUrl.toString().substring(IMAGE_URL_PREFIX.length());
 		resourceHref = currentFolder + resourceHref;
-		resourceHref = StringUtil.collapsePathDots(resourceHref);
+		// resourceHref = StringUtil.collapsePathDots(resourceHref);
 		return resourceHref;
 	}
 	
