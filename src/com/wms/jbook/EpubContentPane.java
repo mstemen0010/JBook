@@ -332,7 +332,7 @@ public class EpubContentPane extends JPanel implements NavigationEventListener, 
 		String resourceHref = clickUrl.toString();
 		try {
 			resourceHref = URLDecoder.decode(resourceHref,
-					Constants.CHARACTER_ENCODING);
+					"UTF-8");
 		} catch (UnsupportedEncodingException e) {
 			log.error(e.getMessage());
 		}

@@ -17,6 +17,7 @@ import java.awt.event.ActionListener;
 import java.io.File;
 import java.io.InputStream;
 import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -362,9 +363,16 @@ public class JBookView extends FrameView {
         //<editor-fold defaultstate="collapsed" desc="comment">
         this.jChapterList.setModel(chapterListModel);
         //String testBook1 = "H:\\Books\\test.epub";
-        String testBook1 = "H:\\Books\\XPath_and_XPointer.epub";
+        String libPath = "C:\\Users\\Wintermut3\\Documents\\Books";
+        String libSection = "\\18Days\\";
+        String bookName = "18days_issue1.epub";
+        StringBuilder sb = new StringBuilder(libPath);
+        sb.append(libSection).append(bookName);
+        
+        Path bookPath = Paths.get( sb.toString() );
+        String testBook1 = "18days_issue1.epub";
         testBook1 = "c:\\books\\vernejuletext98milnd11epub.epub";
-        this.openJBook(testBook1);
+        this.openJBook(bookPath.toString());
         // status bar initialization - message timeout, idle icon and busy animation, etc
         ResourceMap resourceMap = getResourceMap();
         int messageTimeout = resourceMap.getInteger("StatusBar.messageTimeout");
